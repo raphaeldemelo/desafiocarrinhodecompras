@@ -5,7 +5,7 @@ import CardItem from '../../components/CardItem'
 
 export default function Cart() {
 
-    const { cart, addItemCarrinho, removeItemCart } = useContext(CartContext);
+    const { cart, addItemCarrinho, removeItemCart, total } = useContext(CartContext);
 
     return (
         <View style={styles.container}>
@@ -21,6 +21,7 @@ export default function Cart() {
                         removeAmount={() => removeItemCart(item)}
                     />
                 )}
+                ListFooterComponent={() => <Text style={styles.total}>Total R$ {total}</Text>}
             />
         </View>
     )
@@ -38,6 +39,13 @@ const styles = StyleSheet.create({
         paddingEnd: 14,
         paddingTop: 14,
         paddingLeft: 50,
+        paddingRight: 14,
+    },
+    total: {
+        fontWeight: 'bold',
+        fontSize: 18,
+        marginBottom: 24,
+        paddingLeft: 14,
         paddingRight: 14,
     }
 })
