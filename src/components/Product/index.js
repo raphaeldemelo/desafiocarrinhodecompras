@@ -5,7 +5,7 @@ export default function Product({ data, addToCart }) {
         <View style={styles.container}>
             <View>
                 <Text style={styles.title}>{data.name}</Text>
-                <Text style={styles.price}>R$ {data.price}</Text>
+                <Text style={styles.price}>R$ {data.price.toFixed(2)}</Text>
             </View>
             <TouchableOpacity style={styles.buttonAdd} onPress={addToCart}>
                 <Text style={styles.buttonText}>+</Text>

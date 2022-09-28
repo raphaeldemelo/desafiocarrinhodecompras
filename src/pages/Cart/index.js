@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 18,
         marginBottom: 24,
+        paddingTop: 14,
         paddingLeft: 14,
         paddingRight: 14,
     }
