@@ -24,7 +24,7 @@ export default function CardItem({ data, addAmount, removeAmount }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{data.name}</Text>
-            <Text style={styles.price}>R$ {data.price}</Text>
+            <Text style={styles.price}>R$ {data.price.toFixed(2)}</Text>
 
             <View style={styles.amountContainer}>
                 <TouchableOpacity style={styles.buttonAdd} onPress={handleRemoveItem}>
